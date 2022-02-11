@@ -1,7 +1,7 @@
 # Parcial de Programación Web.
 - Se utiliza Angular con TypeScript, Html, Css y Bootstrap
 - Autenticación utilizando el servicio de Auth0
-- Se consume la API publico de Rick & Morty
+- Se consume la API pública de Rick & Morty https://rickandmortyapi.com/
 - Listado de Personajes
 - Detalle de Personaje
 - Listado de Episodios
