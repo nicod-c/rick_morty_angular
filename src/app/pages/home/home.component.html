@@ -1,0 +1,36 @@
+<!--NAV BAR-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid" position="relative">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink] = "['/episode']">Listar episodios</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink] = "['/personajes']">Listar personajes</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <app-logout-button></app-logout-button>
+</nav>
+<br>
+<!-- /NAV BAR-->
+
+<div style = "text-align: center">
+
+<h3 *ngIf="!(auth.isAuthenticated$ | async)">Tenes que autenticarte para acceder al contenido</h3>
+
+<div *ngIf="(auth.isAuthenticated$ | async)">
+<h3 *ngIf="auth.user$ | async as user">Bienvenido {{ user.name }}</h3>
+</div>
+
+<img src="assets\images\RyM_.png" width="25%" style="display: inline-block;">
+<br>
+
+<app-login-button></app-login-button>
+
+</div>

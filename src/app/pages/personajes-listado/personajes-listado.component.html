@@ -1,0 +1,22 @@
+<app-nav-bar></app-nav-bar>
+
+<h3 style="text-align: center;">Personajes</h3>
+<table class="table table-success table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let pers of personajes.results">
+        <th scope="row">{{pers.id}}</th>
+        <td>{{pers.name}}</td>
+        <td><a [routerLink] = "['/personajes',pers.id]"><i class="bi bi-eye-fill"></i></a></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="col text-center">
+    <button *ngIf = "info.prev != null" class="btn btn-outline-secondary"  (click) = "retrocederPag()"><i class="bi bi-caret-left-square-fill"></i></button> <button *ngIf = "info.next != null" class="btn btn-outline-secondary" (click) = "avanzarPag()"><i class="bi bi-caret-right-square-fill"></i></button>
+</div>

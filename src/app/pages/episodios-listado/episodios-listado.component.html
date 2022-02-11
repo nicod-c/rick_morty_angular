@@ -1,0 +1,24 @@
+<app-nav-bar></app-nav-bar>
+
+<h3 style="text-align: center;">Episodios</h3>
+<table class="table table-success table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Air Date</th>
+        <th scope="col">Episode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let epi of episodes.results">
+        <th scope="row">{{epi.id}}</th>
+        <td>{{epi.name}}</td>
+        <td>{{epi.air_date}}</td>
+        <td>{{epi.episode}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="col text-center">
+    <button *ngIf = "info.prev != null" class="btn btn-outline-secondary"  (click) = "retrocederPag()"><i class="bi bi-caret-left-square-fill"></i></button><button *ngIf = "info.next != null" class="btn btn-outline-secondary" (click) = "avanzarPag()"><i class="bi bi-caret-right-square-fill"></i></button>
+</div>

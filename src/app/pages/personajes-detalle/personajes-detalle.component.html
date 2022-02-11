@@ -1,0 +1,14 @@
+<app-nav-bar></app-nav-bar>
+
+<body class="row align-items-center justify-content-center">
+<h3 style="text-align: center;">{{personaje.name}}</h3>
+<div class="card" style="width: 20rem;">
+  <img src="{{personaje.image}}" class="card-img-top" alt="{{personaje.name}}">
+  <div class="card-body">
+    <p class="card-text"><b>Status:</b> {{personaje.status}}</p>
+    <p class="card-text"><b>Especie:</b> {{personaje.species}}</p>
+    <p class="card-text"><b>Género:</b> {{personaje.gender}}</p>
+    <a [routerLink] = "['/personajes']" class="btn btn-success">Volver</a>
+  </div>
+</div>
+</body>
