@@ -1,4 +1,10 @@
-# Parcialdos
+# Parcial de Programación Web.
+- Se utiliza Angular con TypeScript, Html, Css y Bootstrap
+- Autenticación utilizando el servicio de Auth0
+- Se consume la API publico de Rick & Morty
+- Listado de Personajes
+- Detalle de Personaje
+- Listado de Episodios
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 
